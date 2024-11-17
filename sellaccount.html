@@ -3,98 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop Tài Khoản Game - Mua bán tài khoản game chất lượng.">
-    <link rel="stylesheet" href="style.css">
-    <title>Shop Tài Khoản Game</title>
+    <title>ACC FIFA - Tài Khoản FIFA Chất Lượng</title>
     <style>
-        #successMessage {
-            display: none; /* Ẩn thông báo ban đầu */
-            color: green;
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #222;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Main Section */
+        .main {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .intro {
+            padding: 30px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .intro h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Product Section */
+        .products {
+            background-color: #fff;
+            padding: 20px;
             margin-top: 20px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .products h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+            width: 45%;
+            background-color: #fafafa;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .product-item h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .product-item p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Shop Tài Khoản Game</h1>
-        <nav>
+        <div class="logo">
+            <img src="https://storage.googleapis.com/colinlnclesr/photo_2023-09-21_13-49-15.jpg" alt="ACC FIFA">
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar">
             <ul>
-                <li><a href="http://khoidtrai.com" class="active">Trang Chủ</a></li>
-                <li><a href="http://127.0.0.1:5500/sp/sp.html">Sản Phẩm</a></li>
-                <li><a href="http://127.0.0.1:5500/liên%20hệ/gmail.html">Liên Hệ</a></li>
-                <li><a href="http://127.0.0.1:5500/đăng%20nhập/đăng%20nhập.html">Đăng Nhập</a></li>
-                <li><a href="http://127.0.0.1:5500/đăng%20ký/đăng%20ký.html">Đăng Ký</a></li>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Hỗ trợ</a></li>
+                <li><a href="http://127.0.0.1:5500/chatwithme.html">Liên hệ</a></li> <!-- Liên kết đến trang liên hệ -->
+                <li class="login-btn"><a href="#">Đăng nhập</a></li>
+                <li class="register-btn"><a href="#">Đăng ký</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main Section -->
     <main>
-        <section class="products">
-            <h2>Sản Phẩm Nổi Bật</h2>
-            <article class="product">
-                <img src="https://s.net.vn/CfUU" alt="Tài khoản FIFA 21 với đầy đủ đội hình" loading="lazy">
-                <h3>Tài khoản FIFA 21</h3>
-                <p>Giá: 300.000.000 VNĐ</p>
-                <button onclick="confirmPurchase('FIFA 21')">Mua Ngay</button>
-            </article>
-            <article class="product">
-                <img src="https://s.net.vn/CfUU" alt="Tài khoản FIFA 22" loading="lazy">
-                <h3>Tài khoản FIFA 22</h3>
-                <p>Giá: 350.000.000 VNĐ</p>
-                <button onclick="confirmPurchase('FIFA 22')">Mua Ngay</button>
-            </article>
-            <article class="product">
-                <img src="https://s.net.vn/S0vx" alt="Tài khoản FIFA 23" loading="lazy">
-                <h3>Tài khoản FIFA 23</h3>
-                <p>Giá: 400.000.000 VNĐ</p>
-                <button onclick="confirmPurchase('FIFA 23')">Mua Ngay</button>
-            </article>
-            <!-- Thêm sản phẩm khác ở đây nếu cần -->
+        <section class="intro">
+            <h1>Chào mừng đến với ACC FIFA!</h1>
+            <p>Chúng tôi cung cấp các tài khoản FIFA chất lượng, uy tín và giá cả hợp lý.</p>
+            <button onclick="scrollToProducts()">Khám Phá Sản Phẩm</button>
         </section>
 
-        <section>
-            <h1>Đăng Ký Tài Khoản</h1>
-            <form id="registrationForm">
-                <label for="name">Tên:</label>
-                <input type="text" id="name" name="name" required>
+        <!-- Product Section -->
+        <section class="products" id="products">
+            <h2>Các Sản Phẩm Nổi Bật</h2>
+            <div class="product-list" id="product-list">
+                <!-- Sản phẩm hiện có -->
+                <div class="product-item">
+                    <img src="https://s.net.vn/S0vx" alt="Tài khoản FIFA 1">
+                    <h3>Tài khoản FIFA 1</h3>
+                    <p>Giá: 500,000,000 VND</p>
+                    <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 1')">Mua ngay</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://accfifa.com/api/image/fullsize/8ffab4c7-1368-4e84-a3cd-5ff96bc9df6e-untitled1.png" alt="Tài khoản FIFA 2">
+                    <h3>Tài khoản FIFA 2</h3>
+                    <p>Giá: 450,000,000 VND</p>
+                    <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 2')">Mua ngay</button>
+                </div>
+            </div>
+        </section>
 
-                <label for="email">Email hoặc Số điện thoại:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="password">Mật khẩu:</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="birthdate">Ngày sinh:</label>
-                <input type="date" id="birthdate" name="birthdate" required>
-
-                <label for="gender">Giới tính:</label>
-                <select id="gender" name="gender">
-                    <option value="male">Nam</option>
-                    <option value="female">Nữ</option>
-                    <option value="other">Khác</option>
-                </select>
-
-                <button type="button" onclick="register()">Đăng ký</button>
-            </form>
-
-            <div id="successMessage">Đăng ký thành công!</div>
+        <!-- Thêm sản phẩm khi cuộn đến -->
+        <section class="products" id="extra-products" style="display:none;">
+            <h2>Các Sản Phẩm Thêm</h2>
+            <div class="product-list" id="product-list-extra">
+                <div class="product-item">
+                    <img src="https://s.net.vn/WPra" alt="Tài khoản FIFA 3">
+                    <h3>Tài khoản FIFA 3</h3>
+                    <p>Giá: 470,000,000 VND</p>
+                    <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 3')">Mua ngay</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://s.net.vn/WPra" alt="Tài khoản FIFA 4">
+                    <h3>Tài khoản FIFA 4</h3>
+                    <p>Giá: 460,000,000 VND</p>
+                    <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 4')">Mua ngay</button>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Shop Tài Khoản Game. Bản quyền thuộc về công ty.</p>
+        <p>&copy; 2024 ACC FIFA - Tất cả quyền lợi được bảo lưu.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        function confirmPurchase(productName) {
-            alert(`Mua tài khoản ${productName} thành công!`);
+        // Hàm hiển thị thông báo khi mua sản phẩm
+        function buyNow(productName) {
+            alert("Mua thành công: " + productName);
         }
 
-        function register() {
-            document.getElementById("successMessage").style.display = "block";
+        // Hàm cuộn đến phần sản phẩm
+        function scrollToProducts() {
+            // Cuộn đến phần sản phẩm
+            document.getElementById("products").scrollIntoView({ behavior: 'smooth' });
+            
             setTimeout(function() {
-                window.location.href = "http://127.0.0.1:5500/bán%20acc.html";
-            }, 2000); // 2000ms = 2 giây
+                // Hiển thị thêm sản phẩm sau khi cuộn đến phần sản phẩm
+                document.getElementById("extra-products").style.display = "block";
+            }, 500); // Đợi một chút để trang có thời gian cuộn xuống
         }
     </script>
 </body>
