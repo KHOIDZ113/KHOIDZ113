@@ -28,14 +28,29 @@
             background-color: #222;
             padding: 10px 0;
             text-align: center;
+            color: #fff;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .logo img {
             width: 100%;
             max-width: 200px;
             height: auto;
+            margin-bottom: 10px;
         }
 
+        .intro-text {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Navbar */
         .navbar {
             background-color: #333;
         }
@@ -70,16 +85,6 @@
         .intro {
             padding: 30px;
             background-color: #fff;
-            margin-bottom: 20px;
-        }
-
-        .intro h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            font-size: 18px;
             margin-bottom: 20px;
         }
 
@@ -180,18 +185,24 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">
-            <img src="https://storage.googleapis.com/colinlnclesr/photo_2023-09-21_13-49-15.jpg" alt="ACC FIFA">
+        <div class="logo-container">
+            <!-- Logo và văn bản giới thiệu -->
+            <div class="logo">
+                <img src="https://storage.googleapis.com/colinlnclesr/photo_2023-09-21_13-49-15.jpg" alt="ACC FIFA">
+            </div>
+            <div class="intro-text">
+                <h1>Chào mừng đến với ACC FIFA!</h1>
+                <p>Chúng tôi cung cấp các tài khoản FIFA chất lượng, uy tín và giá cả hợp lý.</p>
+            </div>
         </div>
         <!-- Navbar -->
         <nav class="navbar">
             <ul>
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#products">Sản phẩm</a></li> <!-- Liên kết đến phần sản phẩm -->
                 <li><a href="#">Hỗ trợ</a></li>
-                <li><a href="http://127.0.0.1:5500/chatwithme.html">Liên hệ</a></li> <!-- Liên kết đến trang liên hệ -->
-                <li class="login-btn"><a href="#">Đăng nhập</a></li>
-                <li class="register-btn"><a href="#">Đăng ký</a></li>
+                <li><a href="http://127.0.0.1:5500/chatwithme.html">Liên hệ</a></li>
+                <li class="login-btn"><a href="http://127.0.0.1:5500/signupandlogin.html">Đăng nhập</a></li> <!-- Liên kết đến trang đăng nhập -->
             </ul>
         </nav>
     </header>
@@ -199,8 +210,6 @@
     <!-- Main Section -->
     <main>
         <section class="intro">
-            <h1>Chào mừng đến với ACC FIFA!</h1>
-            <p>Chúng tôi cung cấp các tài khoản FIFA chất lượng, uy tín và giá cả hợp lý.</p>
             <button onclick="scrollToProducts()">Khám Phá Sản Phẩm</button>
         </section>
 
@@ -208,15 +217,14 @@
         <section class="products" id="products">
             <h2>Các Sản Phẩm Nổi Bật</h2>
             <div class="product-list" id="product-list">
-                <!-- Sản phẩm hiện có -->
                 <div class="product-item">
-                    <img src="https://s.net.vn/S0vx" alt="Tài khoản FIFA 1">
+                    <img src="https://s.net.vn/z00u" alt="Tài khoản FIFA 1">
                     <h3>Tài khoản FIFA 1</h3>
                     <p>Giá: 500,000,000 VND</p>
                     <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 1')">Mua ngay</button>
                 </div>
                 <div class="product-item">
-                    <img src="https://accfifa.com/api/image/fullsize/8ffab4c7-1368-4e84-a3cd-5ff96bc9df6e-untitled1.png" alt="Tài khoản FIFA 2">
+                    <img src="https://s.net.vn/z00u" alt="Tài khoản FIFA 2">
                     <h3>Tài khoản FIFA 2</h3>
                     <p>Giá: 450,000,000 VND</p>
                     <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 2')">Mua ngay</button>
@@ -224,22 +232,16 @@
             </div>
         </section>
 
-        <!-- Thêm sản phẩm khi cuộn đến -->
         <section class="products" id="extra-products" style="display:none;">
             <h2>Các Sản Phẩm Thêm</h2>
             <div class="product-list" id="product-list-extra">
                 <div class="product-item">
-                    <img src="https://s.net.vn/WPra" alt="Tài khoản FIFA 3">
+                    <img src="https://s.net.vn/z00u" alt="Tài khoản FIFA 3">
                     <h3>Tài khoản FIFA 3</h3>
                     <p>Giá: 470,000,000 VND</p>
                     <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 3')">Mua ngay</button>
                 </div>
-                <div class="product-item">
-                    <img src="https://s.net.vn/WPra" alt="Tài khoản FIFA 4">
-                    <h3>Tài khoản FIFA 4</h3>
-                    <p>Giá: 460,000,000 VND</p>
-                    <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 4')">Mua ngay</button>
-                </div>
+                <!-- Các sản phẩm còn lại -->
             </div>
         </section>
     </main>
@@ -247,6 +249,11 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 ACC FIFA - Tất cả quyền lợi được bảo lưu.</p>
+        <p>Hỗ trợ sử dụng: 00000000</p>
+        <p>Hỗ trợ vận chuyển: 0000000</p>
+        <p>Email: khoit0000p@gmail.com</p>
+        <p>Hỗ trợ 24/7</p>
+        <p>Liên hệ hợp tác - Email: partner@sapo.vn</p>
     </footer>
 
     <!-- JavaScript -->
@@ -256,15 +263,13 @@
             alert("Mua thành công: " + productName);
         }
 
-        // Hàm cuộn đến phần sản phẩm
+        // Hàm cuộn đến phần sản phẩm và hiển thị thêm sản phẩm
         function scrollToProducts() {
-            // Cuộn đến phần sản phẩm
             document.getElementById("products").scrollIntoView({ behavior: 'smooth' });
-            
+
             setTimeout(function() {
-                // Hiển thị thêm sản phẩm sau khi cuộn đến phần sản phẩm
                 document.getElementById("extra-products").style.display = "block";
-            }, 500); // Đợi một chút để trang có thời gian cuộn xuống
+            }, 800);
         }
     </script>
 </body>
