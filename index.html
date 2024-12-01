@@ -127,11 +127,16 @@
             margin: 10px 0;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .product-item img {
             width: 100%;
-            height: auto;
+            height: 200px;
+            object-fit: cover;
             margin-bottom: 15px;
         }
 
@@ -152,6 +157,7 @@
             border: none;
             font-size: 16px;
             cursor: pointer;
+            margin-top: auto;
         }
 
         .buy-btn:hover {
@@ -170,6 +176,7 @@
         @media (max-width: 768px) {
             .product-item {
                 width: 100%;
+                height: auto;
             }
 
             .navbar ul {
@@ -198,11 +205,11 @@
         <!-- Navbar -->
         <nav class="navbar">
             <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#products">Sản phẩm</a></li> <!-- Liên kết đến phần sản phẩm -->
-                <li><a href="#">Hỗ trợ</a></li>
+                <li><a href="#" onclick="smoothScrollToProducts()">Trang chủ</a></li>
+                <li><a href="#products" onclick="smoothScrollToProducts()">Sản phẩm</a></li>
+                <li><a href="http://127.0.0.1:5500/introduce.html">Giới thiệu</a></li> <!-- Liên kết đến trang giới thiệu -->
                 <li><a href="http://127.0.0.1:5500/chatwithme.html">Liên hệ</a></li>
-                <li class="login-btn"><a href="http://127.0.0.1:5500/signupandlogin.html">Đăng nhập</a></li> <!-- Liên kết đến trang đăng nhập -->
+                <li class="login-btn"><a href="http://127.0.0.1:5500/signupandlogin.html">Đăng nhập</a></li>
             </ul>
         </nav>
     </header>
@@ -224,7 +231,7 @@
                     <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 1')">Mua ngay</button>
                 </div>
                 <div class="product-item">
-                    <img src="https://s.net.vn/z00u" alt="Tài khoản FIFA 2">
+                    <img src="https://accfifa.com/api/image/fullsize/8ffab4c7-1368-4e84-a3cd-5ff96bc9df6e-untitled1.png" alt="Tài khoản FIFA 2">
                     <h3>Tài khoản FIFA 2</h3>
                     <p>Giá: 450,000,000 VND</p>
                     <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 2')">Mua ngay</button>
@@ -241,7 +248,30 @@
                     <p>Giá: 470,000,000 VND</p>
                     <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 3')">Mua ngay</button>
                 </div>
-                <!-- Các sản phẩm còn lại -->
+                <div class="product-item">
+                    <img src="https://s.net.vn/z00u" alt="Tài khoản FIFA 4">
+                    <h3>Tài khoản FIFA 4</h3>
+                    <p>Giá: 460,000,000 VND</p>
+                    <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 4')">Mua ngay</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://s.net.vn/z00u" alt="Tài khoản FIFA 5">
+                    <h3>Tài khoản FIFA 5</h3>
+                    <p>Giá: 480,000,000 VND</p>
+                    <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 5')">Mua ngay</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://s.net.vn/z00u" alt="Tài khoản FIFA 6">
+                    <h3>Tài khoản FIFA 6</h3>
+                    <p>Giá: 500,000,000 VND</p>
+                    <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 6')">Mua ngay</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://s.net.vn/z00u" alt="Tài khoản FIFA 7">
+                    <h3>Tài khoản FIFA 7</h3>
+                    <p>Giá: 510,000,000 VND</p>
+                    <button class="buy-btn" onclick="buyNow('Tài khoản FIFA 7')">Mua ngay</button>
+                </div>
             </div>
         </section>
     </main>
@@ -258,18 +288,24 @@
 
     <!-- JavaScript -->
     <script>
-        // Hàm hiển thị thông báo khi mua sản phẩm
+        window.onload = function() {
+            alert("Xin chào đến với ACCFIFA!");
+        }
+
         function buyNow(productName) {
             alert("Mua thành công: " + productName);
         }
 
-        // Hàm cuộn đến phần sản phẩm và hiển thị thêm sản phẩm
         function scrollToProducts() {
             document.getElementById("products").scrollIntoView({ behavior: 'smooth' });
 
             setTimeout(function() {
                 document.getElementById("extra-products").style.display = "block";
             }, 800);
+        }
+
+        function smoothScrollToProducts() {
+            window.scrollBy(0, 100);
         }
     </script>
 </body>
